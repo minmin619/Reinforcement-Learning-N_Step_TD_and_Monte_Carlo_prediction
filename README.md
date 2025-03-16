@@ -16,7 +16,9 @@ This repository explores **On-Policy n-Step Temporal Difference (TD) Learning** 
 - **Combines the advantages** of TD(0) and Monte Carlo methods.
 
  **Update Rule:**
-$ V(s_t) \leftarrow V(s_t) + \alpha \left( G_t - V(s_t) \right) $
+```math
+V(s_t) \leftarrow V(s_t) + \alpha \left( G_t - V(s_t) \right)
+```
 where the return is:
 $$
 G_t = R_t + \gamma R_{t+1} + \dots + \gamma^{n-1} R_{t+n} + \gamma^n V(S_{t+n})
