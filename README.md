@@ -19,19 +19,21 @@ This repository explores **On-Policy n-Step Temporal Difference (TD) Learning** 
 ```math
 V(s_t) \leftarrow V(s_t) + \alpha \left( G_t - V(s_t) \right)
 ```
+
 where the return is:
-$$
+```math
 G_t = R_t + \gamma R_{t+1} + \dots + \gamma^{n-1} R_{t+n} + \gamma^n V(S_{t+n})
-$$
+```
 
 ### ** Off-Policy Monte Carlo Prediction**
 - Estimates the value function of a **target policy** \( \pi \) while following a **behavior policy** \( b \).
 - Uses **importance sampling** to correct the discrepancy between the policies.
 
  **Importance Sampling Ratio:**
-$$
+```math
 \frac{\pi(a|s)}{b(a|s)}
-$$
+```
+
 - **Ordinary Importance Sampling (Unbiased, High Variance)**
 - **Weighted Importance Sampling (Biased, Lower Variance)**
 
